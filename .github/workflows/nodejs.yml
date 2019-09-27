@@ -19,6 +19,6 @@ jobs:
       - name: npm install, build
         run: |
           npm install
-          npm run build:gh
+          npm run build:gh --if-present
         env:
           NODE_ENV: production
