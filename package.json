@@ -1,0 +1,32 @@
+{
+  "name": "kuan-vue-scatter",
+  "version": "1.0.0",
+  "description": "消散效果",
+  "main": "kuan-pack.config.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node build/dev",
+    "build:lib": "cross-env NODE_ENV=production node build/buildLib",
+    "build:gh": "cross-env NODE_ENV=production node build/buildGh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuan1/kuan-vue-scatter.git"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "vue",
+    "vue-scatter"
+  ],
+  "author": "luzhongk@126.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuan1/kuan-vue-scatter/issues"
+  },
+  "homepage": "https://github.com/kuan1/kuan-vue-scatter#readme",
+  "devDependencies": {
+    "kuan-pack": "^2.1.5"
+  }
+}
