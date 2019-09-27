@@ -26,12 +26,11 @@
     "url": "https://github.com/kuan1/kuan-vue-scatter/issues"
   },
   "homepage": "https://github.com/kuan1/kuan-vue-scatter#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "cross-env": "^6.0.0",
     "kuan-pack": "^2.1.5",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
-  },
-  "dependencies": {
-    "cross-env": "^6.0.0"
   }
 }
