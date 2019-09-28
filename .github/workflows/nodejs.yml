@@ -1,35 +1,17 @@
 name: Node CI
 
 on:
-  [push]
-  # push:
-  #   paths:
-  #     - 'gh/*'
-  #     - 'src/*'
+  push:
+    paths:
+      - 'gh/*'
+      - 'src/*'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    # strategy:
-    #   matrix:
-    #     node-version: [10.x]
-
+  runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      # - name: npm install, build
-      #   run: |
-      #     npm install
-      #     npm run build:gh --if-present
-      #   env:
-      #     NODE_ENV: production
+        uses: actions/checkout@master
 
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
