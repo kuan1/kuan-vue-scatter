@@ -11,13 +11,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x]
+    # strategy:
+    #   matrix:
+    #     node-version: [10.x]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
       # - name: Use Node.js ${{ matrix.node-version }}
       #   uses: actions/setup-node@v1
       #   with:
@@ -32,7 +34,7 @@ jobs:
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
-          ACCESS_TOKEN: 'kuan1'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_BRANCH: master # The branch the action should deploy from.
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist # The folder the action should deploy.
