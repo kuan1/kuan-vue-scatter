@@ -1,11 +1,11 @@
 name: Node CI
 
 on:
-  [push]
-  # push:
-  #   paths:
-  #     - 'gh/*'
-  #     - 'src/*'
+  # [push]
+  push:
+    paths:
+      - 'gh/*'
+      - 'src/*'
 
 jobs:
   build:
