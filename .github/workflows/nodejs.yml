@@ -1,20 +1,22 @@
 name: Node CI
 
 on:
-  push:
-    paths:
-      - 'gh/*'
-      - 'src/*'
+  [push]
+  # push:
+  #   paths:
+  #     - 'gh/*'
+  #     - 'src/*'
 
 jobs:
   build:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v1
         with:
           fetch-depth: 1
-          
+
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
@@ -22,4 +24,4 @@ jobs:
           BASE_BRANCH: master # The branch the action should deploy from.
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist # The folder the action should deploy.
-          BUILD_SCRIPT: npm install && npm run build:gh # The build script the action should run prior to deploying.
+          BUILD_SCRIPT: npm install --development && npm install --production && npm run build:gh # The build script the action should run prior to deploying.
