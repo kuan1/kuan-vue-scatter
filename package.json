@@ -2,7 +2,7 @@
   "name": "kuan-vue-scatter",
   "version": "1.0.0",
   "description": "消散效果",
-  "main": "kuan-pack.config.js",
+  "main": "lib/kuan-vue-scatter.min.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node build/dev",
     "build:lib": "cross-env NODE_ENV=production node build/buildLib",
@@ -26,11 +26,14 @@
     "url": "https://github.com/kuan1/kuan-vue-scatter/issues"
   },
   "homepage": "https://github.com/kuan1/kuan-vue-scatter",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "cross-env": "^6.0.0",
     "kuan-pack": "^2.1.5",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
+  },
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.5",
+    "kuan-utils": "^1.3.13"
   }
 }

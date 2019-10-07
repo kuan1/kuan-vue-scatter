@@ -1,16 +1,13 @@
 import VueScatter from './VueScatter'
 
 const install = Vue => {
-  Vue.component('calendar', Calendar)
-  Vue.component('calendar-picker', CalendarPicker)
+  Vue.component('vue-scatter', VueScatter)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default {
-  install
-}
+VueScatter.install = install
 
-export { VueScatter }
+export default VueScatter
