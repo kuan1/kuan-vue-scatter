@@ -1,5 +1,5 @@
 # kuan-vue-scatter
-消散效果
+灭霸打响指消散效果
 
 ## 安装
 ```bash
@@ -12,8 +12,8 @@ yarn add kuan-vue-scatter
 ```html
 <template>
   <div>
-    <h1>灭霸打响指消散效果</h1>
     <button :disabled="!visible" @click="visible = false">{{visible ? '消散' : '显示'}}</button>
+    
     <vue-scatter :visible="visible" @end="visible = true" class="test-container">
       <img src="./images/1.jpg" alt="">
     </vue-scatter>
